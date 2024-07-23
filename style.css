@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300italic,regular,italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Golos+Text:regular,500,600,700,800,900);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Merriweather;
+  color: #313131;
+}
+
+.container {
+  max-width: 1376px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.header {
+  background-image: url("img/banner1920.png");
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+}
+.header__body {
+  padding-top: 26px;
+  display: flex;
+}
+.header__content {
+  width: 40%;
+}
+.header__text {
+  font-family: "Golos Text";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.header__btns {
+  display: flex;
+  gap: 16px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 66px;
+  text-transform: uppercase;
+  margin-top: 62px;
+  margin-bottom: 24px;
+}
+.title__row._center {
+  text-align: center;
+}
+.title__row._right {
+  text-align: right;
+}
+
+.btn {
+  width: 50%;
+  border-radius: 66px;
+  border: none;
+  padding: 20px 49px;
+  text-align: center;
+  font-family: "Golos Text";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20.8px;
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+}
+
+._light-btn {
+  background-color: transparent;
+  color: #1F1F1F;
+  border: 1px solid #1F1F1F;
+}
+
+marquee {
+  background-color: #F54932;
+  padding: 18px 0;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 1.5125rem;
+  margin-bottom: 80px;
+}/*# sourceMappingURL=style.css.map */
