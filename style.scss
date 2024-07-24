@@ -12,8 +12,12 @@
     color: #313131;
 }
 
+img {
+    max-width: 100%;
+}
+
 .container {
-    max-width: 1376px;
+    max-width: 1232px;
     margin: 0 auto;
     padding: 0 5px;
 }
@@ -31,7 +35,7 @@
     }
 
     &__content {
-        width: 40%;
+        width: 44%;
     }
 
     &__title {}
@@ -209,6 +213,10 @@ marquee {
         font-size: 36px;
         line-height: 39.6px;
     }
+
+    marquee {
+        margin-bottom: 48px;
+    }
 }
 
 @media(max-width:375px) {
@@ -218,61 +226,162 @@ marquee {
         padding: 0 5px;
     }
 
-    // .header {
-    //     background-image: url('img/banner375.png');
-    //     background-position: center;
-    //     background-size: cover;
-    //     min-height: 700px;
 
-    //     &__body {
-    //         padding-top: 18px;
-
-    //     }
-
-    //     &__content {
-    //         width: 100%;
-    //     }
-
-    //     // &__title {}
-
-    //     &__text {
-
-    //         margin-bottom: 32px;
-    //     }
-
-    //     &__btns {
-    //         flex-wrap: wrap;
-    //         gap: 14px;
-    //         margin-bottom: 229px;
-    //     }
-    // }
-
-    // .desktop {
-    //     display: none;
-    // }
-
-    // .mobile {
-    //     display: block;
-    // }
-
-    // .title {
-    //     margin-top: 40px;
-    //     font-size: 36px;
-    //     line-height: 39.6px;
-    // }
-
-    // .btn {
-    //     width: 100%;
-    //     padding: 16px 0;
-    // }
+}
 
 
 
-    // ._light-btn {
-    //     background-color: #FFFFFF;
-    //     opacity: 0.9;
-    //     border: none;
-    // }
+//======================== schedule ======================
+.schedule {
+    margin-bottom: 200px;
 
+    &__content {}
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 35px;
+        margin-bottom: 64px;
+
+    }
+
+    &__descr {
+        width: 61%;
+    }
+
+    &__title {
+
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 48.6px;
+        text-transform: uppercase;
+    }
+
+    &__picture {}
+
+    &__contact {
+        font-family: "Golos Text";
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: #3057A2;
+
+    }
+}
+
+.big-red {
+    font-weight: 700;
+    color: #F54932;
+}
+
+.crossed {
+    text-decoration: line-through #F54932;
+}
+
+.row {
+
+    &__box {
+
+        width: 61%;
+    }
+}
+
+.table {
+    margin-top: 60px;
+    margin-bottom: 48px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.right {
+
+    font-family: "Golos Text";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #313131;
+    border-bottom: 2px solid #D0D0D0;
+    padding: 16px 16px 16px 0;
+}
+
+
+
+.left {
+
+    font-family: "Golos Text";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #313131;
+    border-left: 2px solid #D0D0D0;
+    border-bottom: 2px solid #D0D0D0;
+    padding: 16px 0 16px 16px;
+
+}
+
+._no-border {
+    border-bottom: none;
+}
+
+
+
+
+
+@media(max-width:1024px) {
+    .table {
+        grid-template-columns: 100%;
+    }
+
+    .right {
+        border-bottom: none;
+        padding: 16px 0 12px 0;
+    }
+
+
+
+    .left {
+        border-left: none;
+        border-bottom: 2px solid #D0D0D0;
+        padding: 0 0 16px 0;
+
+    }
+}
+
+@media(max-width:768px) {
+
+
+    .schedule__row {
+        flex-direction: column;
+    }
+
+
+    .schedule {
+
+
+        &__content {}
+
+
+
+        &__title {
+            font-size: 28px;
+            line-height: 37.8px;
+        }
+
+
+
+        &__contact {
+            font-size: 18px;
+            line-height: 21.6px;
+        }
+    }
+
+
+    .row {
+
+        &__box {
+            width: 100%;
+        }
+    }
 
 }

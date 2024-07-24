@@ -4,12 +4,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
   font-family: Merriweather;
   color: #313131;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
-  max-width: 1376px;
+  max-width: 1232px;
   margin: 0 auto;
   padding: 0 5px;
 }
@@ -18,14 +23,14 @@
   background-image: url("img/banner1920.png");
   background-position: center;
   background-size: cover;
-  height: 700px;
+  min-height: 700px;
 }
 .header__body {
   padding-top: 26px;
   display: flex;
 }
 .header__content {
-  width: 40%;
+  width: 44%;
 }
 .header__text {
   font-family: "Golos Text";
@@ -38,6 +43,11 @@
 .header__btns {
   display: flex;
   gap: 16px;
+  margin-bottom: 132px;
+}
+
+.mobile {
+  display: none;
 }
 
 .title {
@@ -56,6 +66,9 @@
 }
 
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50%;
   border-radius: 66px;
   border: none;
@@ -69,10 +82,20 @@
   color: #FFFFFF;
 }
 
+.btn:hover {
+  background-color: #FBCE51;
+  color: #1F1F1F;
+}
+
 ._light-btn {
   background-color: transparent;
   color: #1F1F1F;
   border: 1px solid #1F1F1F;
+}
+
+._light-btn:hover {
+  background-color: #1F1F1F;
+  color: #FFFFFF;
 }
 
 marquee {
@@ -80,7 +103,184 @@ marquee {
   padding: 18px 0;
   color: #FFFFFF;
   font-weight: 400;
-  font-size: 1.375rem;
-  line-height: 1.5125rem;
+  font-size: 22px;
+  line-height: 24.2px;
   margin-bottom: 80px;
+}
+
+@media (max-width: 1360px) {
+  .title {
+    font-size: 45px;
+    line-height: 47px;
+  }
+}
+@media (max-width: 1024px) {
+  .header__content {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+    line-height: 39.6px;
+  }
+  .header__btns {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .btn {
+    width: 100%;
+    padding: 16px 0;
+  }
+  ._light-btn {
+    background-color: #FFFFFF;
+    opacity: 0.9;
+    border: none;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    background-image: url("img/banner375.png");
+    background-position: center;
+    background-size: cover;
+    min-height: 700px;
+  }
+  .header__body {
+    padding-top: 18px;
+  }
+  .header__content {
+    width: 100%;
+  }
+  .header__text {
+    margin-bottom: 32px;
+  }
+  .header__btns {
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 229px;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .title {
+    margin-top: 40px;
+    font-size: 36px;
+    line-height: 39.6px;
+  }
+  marquee {
+    margin-bottom: 48px;
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    max-width: 346px;
+    margin: 0 auto;
+    padding: 0 5px;
+  }
+}
+.schedule {
+  margin-bottom: 200px;
+}
+.schedule__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 64px;
+}
+.schedule__descr {
+  width: 61%;
+}
+.schedule__title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 48.6px;
+  text-transform: uppercase;
+}
+.schedule__contact {
+  font-family: "Golos Text";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #3057A2;
+}
+
+.big-red {
+  font-weight: 700;
+  color: #F54932;
+}
+
+.crossed {
+  -webkit-text-decoration: line-through #F54932;
+          text-decoration: line-through #F54932;
+}
+
+.row__box {
+  width: 61%;
+}
+
+.table {
+  margin-top: 60px;
+  margin-bottom: 48px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.right {
+  font-family: "Golos Text";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #313131;
+  border-bottom: 2px solid #D0D0D0;
+  padding: 16px 16px 16px 0;
+}
+
+.left {
+  font-family: "Golos Text";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #313131;
+  border-left: 2px solid #D0D0D0;
+  border-bottom: 2px solid #D0D0D0;
+  padding: 16px 0 16px 16px;
+}
+
+._no-border {
+  border-bottom: none;
+}
+
+@media (max-width: 1024px) {
+  .table {
+    grid-template-columns: 100%;
+  }
+  .right {
+    border-bottom: none;
+    padding: 16px 0 12px 0;
+  }
+  .left {
+    border-left: none;
+    border-bottom: 2px solid #D0D0D0;
+    padding: 0 0 16px 0;
+  }
+}
+@media (max-width: 768px) {
+  .schedule__row {
+    flex-direction: column;
+  }
+  .schedule__title {
+    font-size: 28px;
+    line-height: 37.8px;
+  }
+  .schedule__contact {
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+  .row__box {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
