@@ -14,6 +14,7 @@ prevButtons.forEach(button => button.addEventListener('click', showPreviousSlide
 nextButtons.forEach(button => button.addEventListener('click', showNextSlide));
 
 let slideIndex = 0;
+let count = 0; //  переменная для отображения счета в слайдере , если выбрана функция отображения сразу по три картинки
 
 // функция для определения номера предыдущего слайда
 function showPreviousSlide() {
@@ -33,6 +34,8 @@ function updateSlider() {
     //если не маленький экран, то выводим по 3 карточки, индекс + 2 следующих (их определяем в массив, в котором в цикле убираем _hidden, добавляем _appearance), всем остальным убираем класс _appearance, добавляем _hidden
     let windowWidth = window.innerWidth;
     if (windowWidth >= 476) {
+        // в этом варианте добавляем и уьираем по одной карточке
+        /*
         let showed = [];
         members.forEach((member, index) => {
 
@@ -48,6 +51,19 @@ function updateSlider() {
                 showed.forEach(slide => slide.classList.add('_appearance'));
             }
         })
+*/
+        //или простой вариант со смной сразу трех картинок
+
+        members.forEach(slide => slide.classList.toggle('_hidden'));
+        members.forEach(slide => slide.classList.toggle('_appearance'));
+        console.log(slideIndex);
+        if ((slideIndex % 2) === 0) {
+            count = 6;
+        }
+        else {
+            count = 3;
+        }
+        sliderCounts.forEach(text => text.textContent = count + ' / 6');
     }
     //на мобилках выводим по одной карточке, ей и меняем классы
     else {
@@ -63,10 +79,10 @@ function updateSlider() {
                 member.classList.add('_hidden');
             }
         })
-
+        sliderCounts.forEach(text => text.textContent = (slideIndex + 1) + ' / 6');
     }
-    // в эошке номера слайда отображаем инфо
-    sliderCounts.forEach(text => text.textContent = (slideIndex + 1) + ' / 6');
+    // в этом окошке номера слайда отображаем инфо (строку разблокировать, если выбираем вариант для десктопа с добавлением карточек по одной)
+    // sliderCounts.forEach(text => text.textContent = (slideIndex + 1) + ' / 6');
 }
 // setInterval(showNextSlide, 4000);
 

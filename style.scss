@@ -441,6 +441,9 @@ marquee {
     padding: 20px;
     gap: 16px;
 
+    &_mobile {
+        display: none;
+    }
 
     &__number {
         display: flex;
@@ -521,6 +524,24 @@ marquee {
     }
 }
 
+@media(max-width:550px) {
+
+    .stages {
+        &__box {
+            display: flex;
+        }
+    }
+
+    .item {
+        &_mobile {
+            display: block;
+        }
+
+        &_desktop {
+            display: none;
+        }
+    }
+}
 
 //======================== members ======================
 .members {
