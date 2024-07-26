@@ -95,6 +95,13 @@
     }
 }
 
+.stage-row {
+
+    display: flex;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
 @media(max-width:1024px) {
     .sub-subtitle {
         margin-bottom: 98px;
