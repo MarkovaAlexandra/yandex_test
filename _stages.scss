@@ -1,0 +1,234 @@
+//====================== stages ====================
+
+
+
+.subtitle {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 64.8px;
+    color: #313131;
+    display: inline;
+}
+
+.sub-subtitle {
+    font-family: "Golos Text";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3057A2;
+    display: inline-block;
+    width: 280px;
+}
+
+.stages {
+
+    margin-bottom: 200px;
+
+    &__content {
+        position: relative;
+    }
+
+    &__box {
+        margin-top: 54px;
+        display: grid;
+        grid-template-columns: 32% 32% 32%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    &__picture {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    &__slider-btns {
+        display: none;
+    }
+
+    &__item {
+        background-image: url("img/paper.png");
+        background-size: cover;
+        padding: 20px;
+        gap: 16px;
+    }
+}
+
+.item {
+    display: flex;
+
+
+    &_mobile {
+        display: none;
+    }
+
+    &__number {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #FFFFFF;
+        font-family: "Golos Text";
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    &__text {
+        font-family: "Golos Text";
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+
+    }
+
+    &_double-row {
+        grid-row: span 2;
+    }
+
+    &_double-col {
+        grid-column: span 2;
+        padding-right: 363px;
+    }
+}
+
+@media(max-width:1024px) {
+    .sub-subtitle {
+        margin-bottom: 98px;
+    }
+
+    .stages {
+
+        &__picture {
+            position: absolute;
+            left: 32%;
+            top: 84px;
+
+        }
+    }
+
+    .item {
+        padding: 12px;
+        gap: 8px;
+
+        &__text {
+            font-size: 18px;
+            line-height: 22px;
+
+        }
+    }
+
+    .stages {
+        &__box {
+            grid-template-columns: 48% 48%;
+            gap: 20px;
+        }
+    }
+
+    .item {
+
+        &_double-row {
+            grid-row: span 1;
+        }
+
+        &_double-col {
+            grid-column: span 2;
+            // padding-right: 363px;
+        }
+    }
+}
+
+@media(max-width:768px) {
+
+
+    .subtitle {
+        display: block;
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .sub-subtitle {
+        width: 100%;
+    }
+}
+
+@media(max-width:550px) {
+
+    //============ сладер этапов ================
+    .stages {
+        &__box {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            min-height: 300px;
+            padding: 62px 20px 20px 20px;
+        }
+
+        &__slider-btns {
+            margin-top: 28px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        &__picture {
+            left: 20%;
+            top: 100px;
+        }
+    }
+
+    .item {
+        &_mobile {
+            display: block;
+        }
+
+        &_desktop {
+            display: none;
+        }
+    }
+
+    .slider-hidden {
+        display: none;
+    }
+
+    .stage-slider-count {
+        display: flex;
+        gap: 6px;
+    }
+
+    .slider-circle {
+        width: 10px;
+        height: 10px;
+        background-color: #D9D9D9;
+        border-radius: 50%;
+
+    }
+
+    ._choosen {
+        background-color: #313131;
+    }
+}
+
+@media(max-width:475px) {
+    .stages {
+        &__picture {
+            top: 154px;
+        }
+    }
+}
+
+@media(max-width:475px) {
+    .stages {
+        &__picture {
+            top: 194px;
+            left: 5%;
+        }
+    }
+}

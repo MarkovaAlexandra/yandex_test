@@ -1,0 +1,177 @@
+//======================== members ======================
+.members {
+    margin-bottom: 140px;
+
+    &__content {}
+
+    &__heading {
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {}
+
+    &__list {}
+}
+
+
+.slider {
+
+    &__btns {
+        display: flex;
+        align-items: center;
+
+        &_mobile {
+            display: none;
+        }
+    }
+
+    &__box {}
+}
+
+.member {
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        padding: 0 37px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33%;
+        transition: all 0.8s;
+    }
+
+    &__picture {
+        margin-bottom: 26px;
+    }
+
+    &__name {
+        flex: 1;
+        font-family: "Golos Text";
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 28.8px;
+        color: #151515;
+        margin-bottom: 6px;
+        text-align: center;
+    }
+
+    &__descr {
+        font-family: "Golos Text";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #151515;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    &__info {
+        padding: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Golos Text";
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.2px;
+        color: #3057A2;
+        border: 1px solid #3057A2;
+        border-radius: 62px;
+        text-transform: capitalize;
+
+    }
+}
+
+.slider-count {
+    padding: 0 14px;
+    font-family: "Golos text";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: #313131;
+
+}
+
+.slider-btn {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+}
+
+.slider-btn:hover circle {
+    fill: #FBCE51;
+}
+
+.slider-btn:disabled circle {
+    fill: #D6D6D6;
+}
+
+._hidden {
+    display: none;
+    visibility: hidden;
+}
+
+._appearance {
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+
+@keyframes fade {
+
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media(max-width:1024px) {
+
+    .members {
+        &__heading {
+            justify-content: center;
+            flex-wrap: wrap;
+            column-gap: 40px;
+        }
+    }
+}
+
+@media(max-width:475px) {
+    .slider {
+        &__btns {
+            &_desktop {
+                display: none;
+            }
+
+            &_mobile {
+                display: flex;
+                justify-content: center;
+                margin-top: 40px;
+            }
+        }
+    }
+
+    // .subtitle {
+    //     font-size: 36px;
+    //     line-height: 40px;
+    // }
+
+    ._mobile-hidden {
+        display: none;
+        visibility: hidden;
+    }
+
+    .member {
+        &__item {
+            width: 100%;
+        }
+    }
+
+}
