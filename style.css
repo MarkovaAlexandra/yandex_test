@@ -145,6 +145,7 @@
   }
   .member__item {
     width: 100%;
+    padding: 0;
   }
 }
 .subtitle {
