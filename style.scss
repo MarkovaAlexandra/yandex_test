@@ -1,7 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300italic,regular,italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:regular,700);
 
 
-@import url(https://fonts.googleapis.com/css?family=Golos+Text:regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Golos+Text:regular,500,600);
 
 @import 'members.scss';
 @import 'stages.scss';
@@ -100,6 +100,7 @@ img {
     line-height: 20.8px;
     background-color: #1F1F1F;
     color: #FFFFFF;
+    transition: all 0.3s ease-in-out;
 
 }
 
@@ -112,6 +113,7 @@ img {
     background-color: transparent;
     color: #1F1F1F;
     border: 1px solid #1F1F1F;
+    transition: all 0.3s ease-in-out;
 }
 
 ._light-btn:hover {
@@ -125,12 +127,18 @@ marquee {
     color: #FFFFFF;
     font-weight: 400;
     font-size: 22px;
-    line-height: 24.2px;
-    margin-bottom: 80px;
+    line-height: 24px;
+    margin-bottom: -4px;
+
 
 }
 
 @media(max-width:1360px) {
+    .container {
+        max-width: 1360px;
+
+    }
+
     .title {
         font-size: 45px;
         line-height: 47px;
@@ -138,6 +146,10 @@ marquee {
 }
 
 @media(max-width:1024px) {
+    .container {
+        max-width: 1024px;
+    }
+
     .header {
 
         &__content {
@@ -147,6 +159,10 @@ marquee {
 }
 
 @media(max-width:768px) {
+    .container {
+        max-width: 768px;
+    }
+
     .title {
         font-size: 36px;
         line-height: 39.6px;
@@ -170,6 +186,12 @@ marquee {
         background-color: #FFFFFF;
         opacity: 0.9;
         border: none;
+    }
+
+    marquee {
+        padding: 10px 0;
+        font-size: 16px;
+        line-height: 17.6px;
     }
 }
 
@@ -218,9 +240,7 @@ marquee {
         line-height: 39.6px;
     }
 
-    marquee {
-        margin-bottom: 48px;
-    }
+
 }
 
 @media(max-width:375px) {
@@ -233,7 +253,16 @@ marquee {
 
 }
 
+//========================= main ===============
+.main {
+    margin-top: 80px;
+}
 
+@media(max-width:600px) {
+    .main {
+        margin-top: 48px;
+    }
+}
 
 //======================== schedule ======================
 .schedule {
@@ -304,7 +333,6 @@ marquee {
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    color: #313131;
     border-bottom: 2px solid #D0D0D0;
     padding: 16px 16px 16px 0;
 }
@@ -317,7 +345,6 @@ marquee {
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    color: #313131;
     border-left: 2px solid #D0D0D0;
     border-bottom: 2px solid #D0D0D0;
     padding: 16px 0 16px 16px;
@@ -394,4 +421,30 @@ marquee {
         }
     }
 
+}
+
+//======================= foooter ==================
+.footer {
+    background-color: #E9DED4;
+
+    &__content {
+        padding-top: 40px;
+        padding-bottom: 72px;
+    }
+
+    &__info {
+        font-family: "Golos Text";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.2px;
+
+    }
+}
+
+@media(max-width:768px) {
+    .footer {
+        &__content {
+            padding-bottom: 60px;
+        }
+    }
 }

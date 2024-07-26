@@ -83,9 +83,21 @@
         border: 1px solid #3057A2;
         border-radius: 62px;
         text-transform: capitalize;
+        transition: all 0.3s ease-in-out;
 
     }
+
+
+
+    &__info:hover {
+        background-color: #3057A2;
+        color: #FFFFFF;
+    }
+
+
 }
+
+
 
 .slider-count {
     padding: 0 14px;
@@ -93,18 +105,18 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 19.2px;
-    color: #313131;
-
 }
 
 .slider-btn {
     background-color: transparent;
     border: none;
     padding: 5px;
+    transition: all 0.3s ease-in-out;
 }
 
 .slider-btn:hover circle {
     fill: #FBCE51;
+    transition: all 0.3s ease-in-out;
 }
 
 .slider-btn:disabled circle {
@@ -158,10 +170,6 @@
         }
     }
 
-    // .subtitle {
-    //     font-size: 36px;
-    //     line-height: 40px;
-    // }
 
     ._mobile-hidden {
         display: none;
