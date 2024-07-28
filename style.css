@@ -198,7 +198,7 @@
 .stages__item {
   background-image: url("img/paper.png");
   background-size: cover;
-  padding: 20px;
+  padding: 20px 14px 20px 20px;
   gap: 16px;
 }
 
@@ -233,7 +233,7 @@
 }
 .item_double-col {
   grid-column: span 2;
-  padding-right: 320px;
+  padding-right: 300px;
 }
 
 .stage-row {
@@ -370,7 +370,7 @@ img {
   display: flex;
 }
 .header__content {
-  width: 44.7%;
+  width: 45%;
 }
 .header__text {
   font-family: "Golos Text";
@@ -542,7 +542,7 @@ marquee {
   }
 }
 .main {
-  margin-top: 80px;
+  margin-top: 86px;
 }
 
 @media (max-width: 600px) {
@@ -590,7 +590,7 @@ marquee {
 }
 
 .row__box {
-  width: 61%;
+  width: 68%;
 }
 .row__box_2 {
   width: 63%;
