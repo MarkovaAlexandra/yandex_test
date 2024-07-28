@@ -34,6 +34,8 @@
 .member {
     &__list {
         display: flex;
+        justify-content: space-between;
+        gap: 20px;
     }
 
     &__item {
@@ -64,9 +66,9 @@
         font-family: "Golos Text";
         font-size: 20px;
         font-weight: 400;
-        line-height: 24px;
+        line-height: 22px;
         color: #151515;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         text-align: center;
     }
 
@@ -100,7 +102,7 @@
 
 
 .slider-count {
-    padding: 0 14px;
+    padding: 0 5px;
     font-family: "Golos text";
     font-weight: 400;
     font-size: 16px;
@@ -156,6 +158,15 @@
 }
 
 @media(max-width:475px) {
+
+    .members {
+        margin-bottom: 78px;
+
+        &__heading {
+            margin-bottom: 28px;
+        }
+    }
+
     .slider {
         &__btns {
             &_desktop {

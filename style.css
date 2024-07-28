@@ -18,6 +18,8 @@
 }
 .member__list {
   display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 .member__item {
   padding: 0 37px;
@@ -44,9 +46,9 @@
   font-family: "Golos Text";
   font-size: 20px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 22px;
   color: #151515;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-align: center;
 }
 .member__info {
@@ -70,7 +72,7 @@
 }
 
 .slider-count {
-  padding: 0 14px;
+  padding: 0 5px;
   font-family: "Golos text";
   font-weight: 400;
   font-size: 16px;
@@ -131,6 +133,12 @@
   }
 }
 @media (max-width: 475px) {
+  .members {
+    margin-bottom: 78px;
+  }
+  .members__heading {
+    margin-bottom: 28px;
+  }
   .slider__btns_desktop {
     display: none;
   }
@@ -225,13 +233,14 @@
 }
 .item_double-col {
   grid-column: span 2;
-  padding-right: 363px;
+  padding-right: 320px;
 }
 
 .stage-row {
   display: flex;
   gap: 8px;
   margin-bottom: 28px;
+  padding-right: 5px;
 }
 
 @media (max-width: 1024px) {
@@ -267,12 +276,16 @@
     display: block;
     font-size: 36px;
     line-height: 40px;
+    margin-bottom: 12px;
   }
   .sub-subtitle {
     width: 100%;
   }
 }
 @media (max-width: 550px) {
+  .stages {
+    margin-bottom: 123px;
+  }
   .stages__box {
     display: flex;
     flex-wrap: wrap;
@@ -282,7 +295,7 @@
     padding: 62px 20px 20px 20px;
   }
   .stages__slider-btns {
-    margin-top: 28px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     gap: 16px;
@@ -341,9 +354,9 @@ img {
 }
 
 .container {
-  max-width: 1232px;
+  max-width: 1366px;
   margin: 0 auto;
-  padding: 0 5px;
+  padding: 0 72px;
 }
 
 .header {
@@ -357,7 +370,7 @@ img {
   display: flex;
 }
 .header__content {
-  width: 44%;
+  width: 44.7%;
 }
 .header__text {
   font-family: "Golos Text";
@@ -365,7 +378,7 @@ img {
   font-size: 18px;
   line-height: 23.4px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 .header__btns {
   display: flex;
@@ -404,7 +417,7 @@ img {
   font-family: "Golos Text";
   font-weight: 500;
   font-size: 16px;
-  line-height: 20.8px;
+  line-height: 16.8px;
   background-color: #1F1F1F;
   color: #FFFFFF;
   transition: all 0.3s ease-in-out;
@@ -435,11 +448,13 @@ marquee {
   font-size: 22px;
   line-height: 24px;
   margin-bottom: -4px;
+  text-transform: uppercase;
 }
 
 @media (max-width: 1360px) {
   .container {
     max-width: 1360px;
+    padding: 0 5px;
   }
   .title {
     font-size: 45px;
@@ -449,6 +464,7 @@ marquee {
 @media (max-width: 1024px) {
   .container {
     max-width: 1024px;
+    padding: 0 5px;
   }
   .header__content {
     width: 50%;
@@ -457,6 +473,7 @@ marquee {
 @media (max-width: 768px) {
   .container {
     max-width: 768px;
+    padding: 0 5px;
   }
   .title {
     font-size: 36px;
@@ -479,11 +496,12 @@ marquee {
     padding: 10px 0;
     font-size: 16px;
     line-height: 17.6px;
+    margin-bottom: 0;
   }
 }
 @media (max-width: 600px) {
   .header {
-    background-image: url("img/banner375.png");
+    background-image: url("img/banner375_1.png");
     background-position: center;
     background-size: cover;
     min-height: 700px;
@@ -493,6 +511,7 @@ marquee {
   }
   .header__content {
     width: 100%;
+    min-height: 780px;
   }
   .header__text {
     margin-bottom: 32px;
@@ -507,6 +526,7 @@ marquee {
   }
   .mobile {
     display: block;
+    margin: 24px 0;
   }
   .title {
     margin-top: 40px;
@@ -538,12 +558,13 @@ marquee {
   justify-content: space-between;
   align-items: center;
   gap: 35px;
-  margin-bottom: 64px;
+  margin-bottom: 66px;
 }
 .schedule__descr {
   width: 61%;
 }
 .schedule__title {
+  margin-top: -6px;
   font-weight: 400;
   font-size: 36px;
   line-height: 48.6px;
@@ -555,6 +576,7 @@ marquee {
   font-size: 20px;
   line-height: 24px;
   color: #3057A2;
+  letter-spacing: -0.3px;
 }
 
 .big-red {
@@ -570,12 +592,15 @@ marquee {
 .row__box {
   width: 61%;
 }
+.row__box_2 {
+  width: 63%;
+}
 
 .table {
-  margin-top: 60px;
-  margin-bottom: 48px;
+  margin-top: 46px;
+  margin-bottom: 25px;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 44% 56%;
 }
 
 .right {
@@ -634,6 +659,11 @@ marquee {
     line-height: 21.6px;
   }
   .row__box {
+    width: 100%;
+  }
+}
+@media (max-width: 475px) {
+  .row__box_2 {
     width: 100%;
   }
 }

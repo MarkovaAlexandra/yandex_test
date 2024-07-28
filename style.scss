@@ -20,10 +20,16 @@ img {
     max-width: 100%;
 }
 
+// .container {
+//     max-width: 1232px;
+//     margin: 0 auto;
+//     padding: 0 5px;
+// }
+
 .container {
-    max-width: 1232px;
+    max-width: 1366px;
     margin: 0 auto;
-    padding: 0 5px;
+    padding: 0 72px;
 }
 
 // ============================= header ==============================
@@ -39,7 +45,7 @@ img {
     }
 
     &__content {
-        width: 44%;
+        width: 44.7%;
     }
 
     &__title {}
@@ -50,7 +56,7 @@ img {
         font-size: 18px;
         line-height: 23.4px;
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 32px;
     }
 
     &__btns {
@@ -97,7 +103,7 @@ img {
     font-family: 'Golos Text';
     font-weight: 500;
     font-size: 16px;
-    line-height: 20.8px;
+    line-height: 16.8px;
     background-color: #1F1F1F;
     color: #FFFFFF;
     transition: all 0.3s ease-in-out;
@@ -129,6 +135,7 @@ marquee {
     font-size: 22px;
     line-height: 24px;
     margin-bottom: -4px;
+    text-transform: uppercase;
 
 
 }
@@ -136,6 +143,7 @@ marquee {
 @media(max-width:1360px) {
     .container {
         max-width: 1360px;
+        padding: 0 5px;
 
     }
 
@@ -148,6 +156,7 @@ marquee {
 @media(max-width:1024px) {
     .container {
         max-width: 1024px;
+        padding: 0 5px;
     }
 
     .header {
@@ -161,6 +170,7 @@ marquee {
 @media(max-width:768px) {
     .container {
         max-width: 768px;
+        padding: 0 5px;
     }
 
     .title {
@@ -192,13 +202,15 @@ marquee {
         padding: 10px 0;
         font-size: 16px;
         line-height: 17.6px;
+        margin-bottom: 0;
     }
 }
 
 @media(max-width:600px) {
 
     .header {
-        background-image: url('img/banner375.png');
+
+        background-image: url('img/banner375_1.png');
         background-position: center;
         background-size: cover;
         min-height: 700px;
@@ -210,6 +222,7 @@ marquee {
 
         &__content {
             width: 100%;
+            min-height: 780px;
         }
 
         // &__title {}
@@ -232,6 +245,7 @@ marquee {
 
     .mobile {
         display: block;
+        margin: 24px 0;
     }
 
     .title {
@@ -275,7 +289,7 @@ marquee {
         justify-content: space-between;
         align-items: center;
         gap: 35px;
-        margin-bottom: 64px;
+        margin-bottom: 66px;
 
     }
 
@@ -284,7 +298,7 @@ marquee {
     }
 
     &__title {
-
+        margin-top: -6px;
         font-weight: 400;
         font-size: 36px;
         line-height: 48.6px;
@@ -299,6 +313,7 @@ marquee {
         font-size: 20px;
         line-height: 24px;
         color: #3057A2;
+        letter-spacing: -0.3px;
 
     }
 }
@@ -317,14 +332,19 @@ marquee {
     &__box {
 
         width: 61%;
+
+        &_2 {
+            width: 63%;
+        }
     }
+
 }
 
 .table {
-    margin-top: 60px;
-    margin-bottom: 48px;
+    margin-top: 46px;
+    margin-bottom: 25px;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 44% 56%;
 }
 
 .right {
@@ -419,8 +439,18 @@ marquee {
         &__box {
             width: 100%;
         }
+
+
     }
 
+}
+
+@media(max-width:475px) {
+    .row {
+        &__box_2 {
+            width: 100%;
+        }
+    }
 }
 
 //======================= foooter ==================

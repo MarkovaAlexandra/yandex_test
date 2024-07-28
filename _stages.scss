@@ -38,6 +38,8 @@
 
     &__picture {
         position: absolute;
+        // bottom: -3px;
+        // right: -60px;
         bottom: 0;
         right: 0;
     }
@@ -91,7 +93,7 @@
 
     &_double-col {
         grid-column: span 2;
-        padding-right: 363px;
+        padding-right: 320px;
     }
 }
 
@@ -100,6 +102,7 @@
     display: flex;
     gap: 8px;
     margin-bottom: 28px;
+    padding-right: 5px;
 }
 
 @media(max-width:1024px) {
@@ -143,7 +146,7 @@
 
         &_double-col {
             grid-column: span 2;
-            // padding-right: 363px;
+
         }
     }
 }
@@ -155,6 +158,7 @@
         display: block;
         font-size: 36px;
         line-height: 40px;
+        margin-bottom: 12px;
     }
 
     .sub-subtitle {
@@ -166,6 +170,8 @@
 
     //============ сладер этапов ================
     .stages {
+        margin-bottom: 123px;
+
         &__box {
             display: flex;
             flex-wrap: wrap;
@@ -177,7 +183,7 @@
         }
 
         &__slider-btns {
-            margin-top: 28px;
+            margin-top: 10px;
             display: flex;
             align-items: center;
             gap: 16px;
