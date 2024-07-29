@@ -90,5 +90,5 @@ function updateSlider() {
     // в этом окошке номера слайда отображаем инфо (строку разблокировать, если выбираем вариант для десктопа с добавлением карточек по одной)
     // sliderCounts.forEach(text => text.textContent = (slideIndex + 1) + ' / 6');
 }
-// setInterval(showNextSlide, 4000);
+setInterval(showNextSlide, 4000);
 
