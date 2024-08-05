@@ -1,19 +1,14 @@
 //======================== members ======================
 .members {
-    margin-bottom: 140px;
-
-    &__content {}
+    margin-bottom: 8.75rem;
 
     &__heading {
-        margin-bottom: 60px;
+        margin-bottom: 3.75rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    &__title {}
-
-    &__list {}
 }
 
 
@@ -28,18 +23,17 @@
         }
     }
 
-    &__box {}
 }
 
 .member {
     &__list {
         display: flex;
         justify-content: space-between;
-        gap: 20px;
+        gap: 1.25rem;
     }
 
     &__item {
-        padding: 0 37px;
+        padding: 0 2.3125rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -48,42 +42,42 @@
     }
 
     &__picture {
-        margin-bottom: 26px;
+        margin-bottom: 1.625rem;
     }
 
     &__name {
         flex: 1;
         font-family: "Golos Text";
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 600;
-        line-height: 28.8px;
+        line-height: 1.8rem;
         color: #151515;
-        margin-bottom: 6px;
+        margin-bottom: 0.375rem;
         text-align: center;
     }
 
     &__descr {
         font-family: "Golos Text";
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 400;
-        line-height: 22px;
+        line-height: 1.375rem;
         color: #151515;
-        margin-bottom: 15px;
+        margin-bottom: 0.9375rem;
         text-align: center;
     }
 
     &__info {
-        padding: 12px;
+        padding: 0.75rem;
         display: flex;
         justify-content: center;
         align-items: center;
         font-family: "Golos Text";
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 500;
-        line-height: 19.2px;
-        color: #3057A2;
-        border: 1px solid #3057A2;
-        border-radius: 62px;
+        line-height: 1.2rem;
+        color: $blue;
+        border: 0.0625rem solid $blue;
+        border-radius: 3.8756rem;
         text-transform: capitalize;
         transition: all 0.3s ease-in-out;
 
@@ -92,7 +86,7 @@
 
 
     &__info:hover {
-        background-color: #3057A2;
+        background-color: $blue;
         color: #FFFFFF;
     }
 
@@ -102,17 +96,17 @@
 
 
 .slider-count {
-    padding: 0 5px;
+    padding: 0 0.3125rem;
     font-family: "Golos text";
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19.2px;
+    font-size: 1rem;
+    line-height: 1.2rem;
 }
 
 .slider-btn {
     background-color: transparent;
     border: none;
-    padding: 5px;
+    padding: 0.3125rem;
     transition: all 0.3s ease-in-out;
 }
 
@@ -146,24 +140,24 @@
     }
 }
 
-@media(max-width:1024px) {
+@media(max-width:64rem) {
 
     .members {
         &__heading {
             justify-content: center;
             flex-wrap: wrap;
-            column-gap: 40px;
+            column-gap: 2.5rem;
         }
     }
 }
 
-@media(max-width:475px) {
+@media(max-width:29.6875rem) {
 
     .members {
-        margin-bottom: 78px;
+        margin-bottom: 4.875rem;
 
         &__heading {
-            margin-bottom: 28px;
+            margin-bottom: 1.75rem;
         }
     }
 
@@ -176,7 +170,7 @@
             &_mobile {
                 display: flex;
                 justify-content: center;
-                margin-top: 40px;
+                margin-top: 2.5rem;
             }
         }
     }

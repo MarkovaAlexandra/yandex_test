@@ -3,6 +3,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Golos+Text:regular,500,600);
 
+@import 'colors.scss';
 @import 'members.scss';
 @import 'stages.scss';
 
@@ -20,16 +21,10 @@ img {
     max-width: 100%;
 }
 
-// .container {
-//     max-width: 1232px;
-//     margin: 0 auto;
-//     padding: 0 5px;
-// }
-
 .container {
-    max-width: 1366px;
+    max-width: 85.375rem;
     margin: 0 auto;
-    padding: 0 72px;
+    padding: 0 4.5rem;
 }
 
 // ============================= header ==============================
@@ -37,10 +32,10 @@ img {
     background-image: url('img/banner1920.png');
     background-position: center;
     background-size: cover;
-    min-height: 700px;
+    min-height: calc(700 / 16) +rem;
 
     &__body {
-        padding-top: 26px;
+        padding-top: calc(26 / 16) + rem;
         display: flex;
     }
 
@@ -48,21 +43,22 @@ img {
         width: 45%;
     }
 
-    &__title {}
+
 
     &__text {
         font-family: 'Golos Text';
         font-weight: 400;
-        font-size: 18px;
-        line-height: 23.4px;
+
+        font-size: calc(18 / 16) + rem;
+        line-height: calc(23.4 / 16) + rem;
         text-align: center;
-        margin-bottom: 32px;
+        margin-bottom: 2rem;
     }
 
     &__btns {
         display: flex;
-        gap: 16px;
-        margin-bottom: 132px;
+        gap: 1rem;
+        margin-bottom: calc(132 / 16) + rem;
     }
 }
 
@@ -72,17 +68,23 @@ img {
 
 .title {
     font-weight: 400;
-    font-size: 60px;
-    line-height: 66px;
+    font-size: calc(60 / 16) + rem;
+    line-height: calc(66 / 16) + rem;
     text-transform: uppercase;
-    margin-top: 62px;
-    margin-bottom: 24px;
+    margin-top: calc(62 / 16) + rem;
+    margin-bottom: calc(24 / 16) + rem;
+
+    &__row {
+        display: block;
+    }
 
     &__row._center {
+        display: block;
         text-align: center;
     }
 
     &__row._right {
+        display: block;
         text-align: right;
     }
 }
@@ -96,14 +98,14 @@ img {
     align-items: center;
     justify-content: center;
     width: 50%;
-    border-radius: 66px;
+    border-radius: calc(66 / 16) + rem;
     border: none;
-    padding: 20px 49px;
+    padding: 1.25rem 3.0625rem;
     text-align: center;
     font-family: 'Golos Text';
     font-weight: 500;
-    font-size: 16px;
-    line-height: 16.8px;
+    font-size: 1rem;
+    line-height: 1.05rem;
     background-color: #1F1F1F;
     color: #FFFFFF;
     transition: all 0.3s ease-in-out;
@@ -118,7 +120,7 @@ img {
 ._light-btn {
     background-color: transparent;
     color: #1F1F1F;
-    border: 1px solid #1F1F1F;
+    border: 0.0625rem solid #1F1F1F;
     transition: all 0.3s ease-in-out;
 }
 
@@ -127,36 +129,50 @@ img {
     color: #FFFFFF;
 }
 
-marquee {
+.marquee {
     background-color: #F54932;
-    padding: 18px 0;
-    color: #FFFFFF;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 24px;
+    padding: 1.125rem 0;
     margin-bottom: -4px;
-    text-transform: uppercase;
+
+    white-space: nowrap;
+    overflow: hidden;
 
 
 }
 
-@media(max-width:1360px) {
+.marquee span {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: calc(22 / 16) + rem;
+    line-height: calc(24 / 16) + rem;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-left: 100%;
+    text-indent: 0;
+    animation: marquee 40s linear infinite;
+}
+
+.marquee span:hover {
+    animation-play-state: paused;
+}
+
+@media(max-width:85rem) {
     .container {
-        max-width: 1360px;
-        padding: 0 5px;
+        max-width: 85rem;
+        padding: 0 0.3125rem;
 
     }
 
     .title {
-        font-size: 45px;
-        line-height: 47px;
+        font-size: calc(45 / 16) + rem;
+        line-height: calc(47 / 16) + rem;
     }
 }
 
-@media(max-width:1024px) {
+@media(max-width:64rem) {
     .container {
-        max-width: 1024px;
-        padding: 0 5px;
+        max-width: 64rem;
+        padding: 0 0.3125rem;
     }
 
     .header {
@@ -167,27 +183,27 @@ marquee {
     }
 }
 
-@media(max-width:768px) {
+@media(max-width:48rem) {
     .container {
-        max-width: 768px;
-        padding: 0 5px;
+        max-width: 48rem;
+        padding: 0 0.3125rem;
     }
 
     .title {
-        font-size: 36px;
-        line-height: 39.6px;
+        font-size: calc(36 / 16) + rem;
+        line-height: calc(39.6 / 16) + rem
     }
 
     .header__btns {
 
         flex-wrap: wrap;
-        gap: 14px;
+        gap: calc(14 / 16) + rem;
 
     }
 
     .btn {
         width: 100%;
-        padding: 16px 0;
+        padding: 1rem 0;
     }
 
 
@@ -198,44 +214,47 @@ marquee {
         border: none;
     }
 
-    marquee {
-        padding: 10px 0;
-        font-size: 16px;
-        line-height: 17.6px;
+    .marquee {
+        padding: 0.625rem 0;
         margin-bottom: 0;
+    }
+
+    .marquee span {
+        font-size: 1rem;
+        line-height: 1.1rem;
     }
 }
 
-@media(max-width:600px) {
+@media(max-width:37.5rem) {
 
     .header {
 
         background-image: url('img/banner375_1.png');
         background-position: center;
         background-size: cover;
-        min-height: 700px;
+        min-height: 43.75rem;
 
         &__body {
-            padding-top: 18px;
+            padding-top: 1.125rem;
 
         }
 
         &__content {
             width: 100%;
-            min-height: 780px;
+            min-height: 48.75rem;
         }
 
         // &__title {}
 
         &__text {
 
-            margin-bottom: 32px;
+            margin-bottom: 2rem;
         }
 
         &__btns {
             flex-wrap: wrap;
-            gap: 14px;
-            margin-bottom: 229px;
+            gap: 0.875rem;
+            margin-bottom: 14.3125rem;
         }
     }
 
@@ -245,42 +264,34 @@ marquee {
 
     .mobile {
         display: block;
-        margin: 24px 0;
+        margin: 1.5rem 0;
     }
 
     .title {
-        margin-top: 40px;
-        font-size: 36px;
-        line-height: 39.6px;
+        margin-top: calc(40 / 16) + rem;
+        font-size: calc(36 / 16) + rem;
+        line-height: calc(39.6 / 16) + rem;
     }
 
 
 }
 
-@media(max-width:375px) {
+@media(max-width:23.4375rem) {
     .container {
-        max-width: 346px;
+        max-width: 21.625rem;
         margin: 0 auto;
-        padding: 0 5px;
+        padding: 0 0.3125rem;
     }
 
 
 }
 
-//========================= main ===============
-.main {
-    margin-top: 86px;
-}
 
-@media(max-width:600px) {
-    .main {
-        margin-top: 48px;
-    }
-}
 
 //======================== schedule ======================
 .schedule {
-    margin-bottom: 200px;
+    margin-top: 5.375rem;
+    margin-bottom: 12.5rem;
 
     &__content {}
 
@@ -288,8 +299,8 @@ marquee {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 35px;
-        margin-bottom: 66px;
+        gap: calc(35 / 16) + rem;
+        margin-bottom: calc(66 / 16) + rem;
 
     }
 
@@ -300,9 +311,13 @@ marquee {
     &__title {
         margin-top: -6px;
         font-weight: 400;
-        font-size: 36px;
-        line-height: 48.6px;
+        font-size: 2.25rem;
+        line-height: 3.0375rem;
         text-transform: uppercase;
+
+        &_inline {
+            display: inline;
+        }
     }
 
     &__picture {}
@@ -310,9 +325,9 @@ marquee {
     &__contact {
         font-family: "Golos Text";
         font-weight: 400;
-        font-size: 20px;
-        line-height: 24px;
-        color: #3057A2;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        color: $blue;
         letter-spacing: -0.3px;
 
     }
@@ -331,7 +346,7 @@ marquee {
 
     &__box {
 
-        width: 68%;
+        width: 65%;
 
         &_2 {
             width: 63%;
@@ -341,8 +356,8 @@ marquee {
 }
 
 .table {
-    margin-top: 46px;
-    margin-bottom: 25px;
+    margin-top: 2.875rem;
+    margin-bottom: 1.5625rem;
     display: grid;
     grid-template-columns: 44% 56%;
 }
@@ -351,10 +366,10 @@ marquee {
 
     font-family: "Golos Text";
     font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    border-bottom: 2px solid #D0D0D0;
-    padding: 16px 16px 16px 0;
+    font-size: calc(20 / 16) + rem;
+    line-height: calc(24 / 16) + rem;
+    border-bottom: 0.125rem solid #D0D0D0;
+    padding: 1rem 1rem 1rem 0;
 }
 
 
@@ -363,11 +378,13 @@ marquee {
 
     font-family: "Golos Text";
     font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    border-left: 2px solid #D0D0D0;
-    border-bottom: 2px solid #D0D0D0;
-    padding: 16px 0 16px 16px;
+    font-size: calc(20 / 16) + rem;
+    ;
+    line-height: calc(24 / 16) + rem;
+    ;
+    border-left: 0.125rem solid #D0D0D0;
+    border-bottom: 0.125rem solid #D0D0D0;
+    padding: 1rem 0 1rem 1rem;
 
 }
 
@@ -379,30 +396,32 @@ marquee {
 
 
 
-@media(max-width:1024px) {
+@media(max-width:64rem) {
     .table {
         grid-template-columns: 100%;
     }
 
     .right {
         border-bottom: none;
-        padding: 16px 0 12px 0;
+        padding: 1rem 0 0.75rem 0;
     }
 
 
 
     .left {
         border-left: none;
-        border-bottom: 2px solid #D0D0D0;
-        padding: 0 0 16px 0;
+        border-bottom: 0.125rem solid #D0D0D0;
+        padding: 0 0 1rem 0;
 
     }
 }
 
-@media(max-width:768px) {
+@media(max-width:48rem) {
 
     .schedule {
-        margin-bottom: 120px;
+        margin-top: 3rem;
+        margin-bottom: 7.5rem;
+
 
         &__row {
             flex-direction: column;
@@ -410,7 +429,7 @@ marquee {
     }
 
     .table {
-        margin-top: 40px;
+        margin-top: 2.5rem;
     }
 
     .schedule {
@@ -421,15 +440,15 @@ marquee {
 
 
         &__title {
-            font-size: 28px;
-            line-height: 37.8px;
+            font-size: calc(28 / 16) + rem;
+            line-height: calc(37.8 / 16) + rem;
         }
 
 
 
         &__contact {
-            font-size: 18px;
-            line-height: 21.6px;
+            font-size: 1.125rem;
+            line-height: 1.35rem;
         }
     }
 
@@ -445,7 +464,8 @@ marquee {
 
 }
 
-@media(max-width:475px) {
+//475px
+@media(max-width:29.6875rem) {
     .row {
         &__box_2 {
             width: 100%;
@@ -458,23 +478,35 @@ marquee {
     background-color: #E9DED4;
 
     &__content {
-        padding-top: 40px;
-        padding-bottom: 72px;
+        padding-top: 2.5rem;
+        padding-bottom: 724.5rem;
     }
 
     &__info {
         font-family: "Golos Text";
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 400;
-        line-height: 19.2px;
+        line-height: 1.2rem;
 
     }
 }
 
-@media(max-width:768px) {
+//48rem=768px
+@media(max-width:48rem) {
     .footer {
         &__content {
-            padding-bottom: 60px;
+            padding-bottom: 3.75rem;
         }
+    }
+}
+
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
     }
 }
